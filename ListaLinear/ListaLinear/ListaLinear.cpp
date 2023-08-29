@@ -64,7 +64,7 @@ void menu()
 
 void inicializar()
 {
-	nElementos = 0;
+	nElementos = 1;
 	cout << "Lista inicializada \n";
 
 }
@@ -105,5 +105,18 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
-
+	int elem;
+	bool busca = false;
+	cout << "Digite qual elemento voce quer encontrar: \n";
+	cin >> elem;
+	for (int i = 1; i < nElementos; i++) {
+		if (elem == lista[i]) {
+			busca = true;
+			cout << "Posicao do elemento: " << i << endl;
+		}
+	}
+	if (busca == false) {
+		cout << "Nada encontrado \n";
+	}
 }
+
